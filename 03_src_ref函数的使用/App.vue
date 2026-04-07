@@ -7,10 +7,11 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import {ref} from 'vue';
+
 export default {
   name: 'App',
-  setup(){
+  setup() {
     //ref实现响应式(基本类型)也是采用Object.definedProperty()来实现的 getter和setter
     let name = ref('张三'); //ref引用对象
     let age = ref(18);
@@ -20,7 +21,7 @@ export default {
       salary: '30k'
     });
 
-    function changeInfo(){
+    function changeInfo() {
       name.value = '李四';
       age.value = 42;
       job.value.type = 'UI工程师';
